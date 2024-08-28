@@ -1,0 +1,28 @@
+
+.app_wrap {
+  border: 2px solid black;
+  
+}
+.app-wrap > .title{
+  background-color: hotpink;
+}
+
+:global .content{
+  color: yellow;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
