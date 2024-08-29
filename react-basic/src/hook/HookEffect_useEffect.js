@@ -27,7 +27,8 @@ function HookEffect() {
   // }, [data, age, ..., ...])
 
   //4
-  useEffect(() => { 
+  useEffect( () => 
+    { // << 콜백함수
     console.log('effetc 실행'); 
 
     return () => { //리턴에 함수를 넣으면 소멸되기 전에 실행된다
