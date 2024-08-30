@@ -3,7 +3,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 function Board() {
 
   const mtStyle = { color: "green", background: "purple" }
-  
+
   return (
     <>
       <h4>글 목록</h4>
@@ -17,10 +17,10 @@ function Board() {
         <hr></hr>
         {/* NavLink */}
         <li><NavLink to='/board/1' style={(a) => {
-          console.log("123",  a);
+          console.log("123", a);
         }}>11번글!!!!!!</NavLink></li> {/* 실행할 함수의 첫 매개변수 */}
-        
-        <li><NavLink to='/board/2' style={({ isActive }) => {
+
+        <li><NavLink to='/board/2' style={({ isActive }) => { /* true 이면스타일을 반환하여 표시한다~! */
           return isActive ? mtStyle : undefined;
         }}>2번글</NavLink></li>
 
@@ -30,6 +30,8 @@ function Board() {
       </ul>
 
       {/* 중첩라우터에서 하위 컴포 표시 */}
+      {/* 아울렛으로 들어가고 표시된다 */}
+
       <p>App.js에서 Route안의 Route를 표시한다</p>
       <Outlet></Outlet>
 
