@@ -17,7 +17,7 @@ function App() {
         color: 'blue',
         border: '5px solid black'
       }}>
-        직접 건드리기
+        직접 건드리기 123
       </div>
 
       {/* import에 styled 쓰면 */}
