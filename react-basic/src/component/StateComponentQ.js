@@ -9,9 +9,7 @@ function StateComponentQ(){
   let plus = () => {
     //data = 123 //직접 바꾸기
     //setData(data + 1); //반응하는 곳 < 여기로 바꿔
-    setData((prev) =>{
-      return prev +1;
-    });
+    //setData((prev) =>{ return prev +1;});
     setData(prev => prev +1); // prev 는 state의 이전값을 받는다
   } 
   

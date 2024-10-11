@@ -7,7 +7,7 @@ import { UserProvider } from "./context/contextAPI2";
 
 function App() {
 //  root
-// /   \
+//  /  \
 // A    B
 //     / \   
 //    C   D

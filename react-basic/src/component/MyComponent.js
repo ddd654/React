@@ -1,55 +1,38 @@
 
-import PropTypes from 'prop-types';
-function MyComponent({ name = "이름123", age = 0, addr = "주소123" }) {
+import PropTypes from 'prop-types'; //프롭스 타입
 
-  //console.log(props);
+function MyComponent({ name = "이름없음", age = 0, addr = "경기도" }  /* props */) { //props값을 받음
 
   return (
     <div>
-
-      이름 : {name} <br></br>
-      나이 : {age} <br />
-      주소 : {addr} <br />
+      이름: {name}<br />
+      나이: {age}<br />
+      주소: {addr}<br />
     </div>
   )
 
-
-  // return(
+  // return (
   //   <div>
-  //     banana <br></br>
-  //     이름 : {porps.name} <br></br>
-  //     나이 : {porps.age} <br/>
-  //     주소 : {porps.addr} <br/>
-  //     두번씩 나오면 index.js 에서 React.StrictMode 주석하기
+  //     이름: {props.name}<br/>
+  //     나이: {props.age}<br/>
+  //     주소: {props.addr}<br/>
   //   </div>
   // )
-
 }
 
-// // props 기본값 지정하기
+//프롭스의 기본값 지정
 // MyComponent.defaultProps = {
-//   name : "수박",
-//   age : 11,
-//   addr: "하와이"
-
+//   name : "이름없음",
+//   age : 0,
+//   addr : "경기도"
 // }
 
-//props 타입 검증 - 에러는 아니나, 타입에 대한 힌트가 된다
+//프롭스의 타입 검증 -> 실제 에러가 나는것은 아니지만, 타입에 대한 힌트를 줍니다.
 MyComponent.propTypes = {
   name: PropTypes.string,
   age: PropTypes.number,
   addr: PropTypes.string
-
 }
-
-
-
-
-
-
-
-
-
 
 
 export default MyComponent;

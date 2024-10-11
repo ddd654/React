@@ -12,15 +12,15 @@ function StateComponent() {
   let [msg, setMsg] = useState('black');
   //윗 줄처럼
   // let data = result[0];
-  // let setData = result[1];a
+  // let setData = result[1];
 
   let enter = () => {
     data = " 이렇게 하면 " // 값을 직접 바꾸는 것을 허용하지 않음
     setData("이렇게 값을 바꾼다") // 값을 변경하는 setter > 비동기적으로 데이터
-
+    
   }
 
-
+  
 
   //화면을 지웠다가 다시 만드는 중
   return (
@@ -32,7 +32,7 @@ function StateComponent() {
       값 변경2 <button onClick={() => setData("퇴장했습니다")}> 퇴장 </button>
       <br></br>
 
-    <h4 style={{color:msg}}>{msg}</h4>
+    <h4 style={{color:msg, margin:'20px'}}>{msg}</h4>
 
 
     <button onClick={() => setMsg('red')}>붉은색</button>

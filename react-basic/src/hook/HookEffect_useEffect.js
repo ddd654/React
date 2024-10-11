@@ -5,26 +5,26 @@ function HookEffect() {
   //useState hook
   const [data, setData] = useState('');
   const [age, setAge] = useState('');
-  //1 
+  
+  // 1 
   //생명주기 관리 useEffect
-  // useEffect( () => {
-  //   console.log('mount 이후에 동작한다');
-  //   console.log("화면을 다 랜더링 하고서 동작한다");
+  useEffect( () => {
+    console.log('mount 이후에 동작한다');
+    console.log("화면을 다 랜더링 하고서 동작한다");
+  })
 
-  // })
+  // 2 
+  useEffect( () =>{/* 첫번쨈 매개변수 */
+    console.log("mount 후에 한번만 실행된다1");
+    console.log("네트워크상에서 데이터를 가져올떄 주로 사용한다");
+  }, /* 두번째 매개변수에 배열 */[])
 
-  //2 
-  // useEffect( () =>{/* 첫번쨈 매개변수 */
-  //   console.log("mount 후에 한번만 실행된다1");
-  //   console.log("네트워크상에서 데이터를 가져올떄 주로 사용한다");
+  // 3
+  useEffect( () => {
+    console.log('특정 값이 변경되서 랭더링 될때 동작');
+  }, [data, age, ...data, ...age]);
 
-  // }, /* 두번째 매개변수에 배열 */[])
-
-  //3
-  // useEffect( () => {
-  //   console.log('특정 값이 변경되서 랭더링 될때 동작');
-
-  // }, [data, age, ..., ...])
+  console.log(...data, '~~~~~~~~~~~~~');
 
   //4
   useEffect( () => 
@@ -51,18 +51,9 @@ function HookEffect() {
   //   let copy = {...ex};
   //   setEx(copy)
   //   console.log(222222222);
-
   // }, [ex]);
 
-
-
-
-
-
-
-
   console.log('code 실행1234');
-
 
   return (
     <>

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';// app js 파일을 받아서 App 이름으로 가져온다
+import App02_component from './App02_component';// app js 파일을 받아서 App 이름으로 가져온다
 import reportWebVitals from './reportWebVitals';
 
 //컴포넌트에서 사용하는 전역 설정
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* 컴포넌트 */}
-    <App />
+    <App02_component />
   </React.StrictMode>
 );
 

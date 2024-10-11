@@ -10,15 +10,16 @@ function IteratorCompo02() {
 
   ];
   let [list, setList] = useState(data);
+
   //3. input태그 stata 로 관리
   let [topic, setTopic] = useState('');
 
-  // //2. 리스트를 이용해서 반복처리
-  const newList = list.map(value =>
-    <li key={value.id} onDoubleClick={handleRemove}>
-      {value.topic}
-    </li>
-    ) // value 안에 {}, {} 위에 하나씩 들어간
+  // // //2. 리스트를 이용해서 반복처리
+  // const newList = list.map(value =>
+  //   <li key={value.id} onDoubleClick={handleRemove}>
+  //     {value.topic}
+  //   </li>
+  //   ) // value 안에 {}, {} 위에 하나씩 들어간
 
 
   //4. 버튼 클릭시에 input state 값을 배열에다가 추가
